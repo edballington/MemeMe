@@ -14,56 +14,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "Meme"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemeMe.Meme.bottomText.setter : Swift.String"
-                  moduleName = "MemeMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edballington/Iphone%20Development%20Projects/MemeMe/MemeMe/Meme.swift"
-                  timestampString = "463800316.219875"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemeMe.Meme.bottomText.materializeForSet : Swift.String"
-                  moduleName = "MemeMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edballington/Iphone%20Development%20Projects/MemeMe/MemeMe/Meme.swift"
-                  timestampString = "463800316.220074"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemeMe.Meme.init (MemeMe.Meme.Type)() -&gt; MemeMe.Meme"
-                  moduleName = "MemeMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edballington/Iphone%20Development%20Projects/MemeMe/MemeMe/Meme.swift"
-                  timestampString = "463800316.22026"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "75">
-               </Location>
-            </Locations>
+            endingLineNumber = "14">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

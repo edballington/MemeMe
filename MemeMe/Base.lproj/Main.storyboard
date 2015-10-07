@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -18,11 +19,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Wu-m2-bQs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Wu-m2-bQs">
                                 <rect key="frame" x="16" y="44" width="568" height="512"/>
+                                <animations/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bSi-5l-Thb">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Y5J-u8-CYq"/>
                                     <barButtonItem style="plain" systemItem="camera" id="7nH-Gh-oft">
@@ -39,20 +42,23 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="DkY-92-FmG"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Top" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="8SL-MG-npb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Top" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="8SL-MG-npb">
                                 <rect key="frame" x="16" y="108" width="568" height="17"/>
+                                <animations/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Bottom" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-dd-3UC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Bottom" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-dd-3UC">
                                 <rect key="frame" x="16" y="446" width="568" height="17"/>
+                                <animations/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1F-kT-mAc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
                                 <items>
                                     <navigationItem id="7uy-SL-HSf">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="51V-41-DTU">
@@ -60,10 +66,16 @@
                                                 <action selector="shareMeme:" destination="vXZ-lx-hvc" id="8Hn-bP-N26"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="iTY-hD-aNf">
+                                            <connections>
+                                                <action selector="cancelMeme:" destination="vXZ-lx-hvc" id="d33-No-Ncs"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="W1F-kT-mAc" firstAttribute="leading" secondItem="bSi-5l-Thb" secondAttribute="leading" id="20E-8G-pP9"/>
@@ -97,12 +109,12 @@
                     </view>
                     <connections>
                         <outlet property="ImagePickerView" destination="3Wu-m2-bQs" id="joy-fi-gut"/>
-                        <outlet property="bottomText" destination="ujZ-dd-3UC" id="hTk-Ts-Inf"/>
+                        <outlet property="bottomTextField" destination="ujZ-dd-3UC" id="FTK-Ac-4p8"/>
                         <outlet property="cameraButton" destination="7nH-Gh-oft" id="572-m7-eiN"/>
                         <outlet property="navBar" destination="W1F-kT-mAc" id="wuB-Sq-9P7"/>
                         <outlet property="shareButton" destination="51V-41-DTU" id="ZbP-IM-NIJ"/>
                         <outlet property="toolBar" destination="bSi-5l-Thb" id="Rw3-ZB-6Ez"/>
-                        <outlet property="topText" destination="8SL-MG-npb" id="5e1-dq-2rh"/>
+                        <outlet property="topTextField" destination="8SL-MG-npb" id="Dch-qi-4iU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

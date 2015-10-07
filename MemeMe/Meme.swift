@@ -2,27 +2,29 @@
 //  Meme.swift
 //  MemeMe
 //
-//  Created by Ed Ballington on 9/8/15.
-//  Copyright (c) 2015 Ed Ballington. All rights reserved.
+//  Created by Ed Ballington on 10/6/15.
+//  Copyright © 2015 Ed Ballington. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class Meme  {
-    var topText = ""
-    var bottomText = ""
-    var originalImage = UIImage()
-    var memeImage = UIImage()
+class Meme: NSObject {
     
-    func save(topText: String, bottomText: String, originalImage: UIImage, memeImage: UIImage) {
-        self.topText = topText
-        self.bottomText = bottomText
-        self.originalImage = originalImage
-        self.memeImage = memeImage
+    // MARK: Model
+    
+    struct Meme {
+        var topText = ""
+        var bottomText = ""
+        var originalImage = UIImage()
+        var memeImage = UIImage()
+        
     }
 
-    
-    
+    func saveMeme(topText: String, bottomText: String, originalImage: UIImage, memeImage: UIImage) -> Meme {
+        
+        //Save the meme object
+        return Meme(topText: topText, bottomText: bottomText, originalImage: originalImage, memeImage: memeImage)
+    }
+
     
 }
