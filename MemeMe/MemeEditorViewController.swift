@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  MemeMe
 //
 //  Created by Ed Ballington on 9/1/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var ImagePickerView: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -140,24 +140,50 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-// MARK: Sharing and Cancel
-    @IBAction func shareMeme(sender: AnyObject) {
+// MARK: Saving, Sharing and Cancel
+
+    func save() {
         
         let originalImage = ImagePickerView.image
         let memeImage = generateMemedImage()
         
+        // Create the Meme
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: originalImage!, memeImage: memeImage)
+        
+        //Add it to the memes array in the App Delegate
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+    
+    }
+    
+    @IBAction func shareMeme(sender: AnyObject) {
+        
+        let memeImage = generateMemedImage()
+        
         let activityViewController = UIActivityViewController(activityItems: [memeImage], applicationActivities: nil)
         
-        presentViewController(activityViewController, animated: true, completion: nil)
+        //Define the completion handler to execute upon successful completion of the activityItem 
+        activityViewController.completionWithItemsHandler = { activity, success, items, error in
         
-        let newMeme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: originalImage!, memeImage: memeImage)
+            if success == true {
+                
+                //Save the meme and dismiss the meme editor view controller
+                self.save()
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+        }
+        
+        
+        presentViewController(activityViewController, animated: true, completion: nil)
 
     }
     
     @IBAction func cancelMeme(sender: AnyObject) {
         
         // Return meme to initial configuration
-        setupMeme()
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     

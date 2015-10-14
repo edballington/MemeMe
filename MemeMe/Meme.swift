@@ -7,8 +7,6 @@
 //
 
 import UIKit
-
-class Meme: NSObject {
     
     // MARK: Model
     
@@ -18,13 +16,13 @@ class Meme: NSObject {
         var originalImage = UIImage()
         var memeImage = UIImage()
         
-    }
-
     func saveMeme(topText: String, bottomText: String, originalImage: UIImage, memeImage: UIImage) -> Meme {
+            
+            //Save the meme object
+            return Meme(topText: topText, bottomText: bottomText, originalImage: originalImage, memeImage: memeImage)
+        }
         
-        //Save the meme object
-        return Meme(topText: topText, bottomText: bottomText, originalImage: originalImage, memeImage: memeImage)
     }
 
-    
-}
+
+
