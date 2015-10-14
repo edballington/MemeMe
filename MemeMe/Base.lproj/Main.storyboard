@@ -30,7 +30,7 @@
         <scene sceneID="p3Z-5I-zWh">
             <objects>
                 <navigationController id="xNt-k8-riY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" selectedImage="table" systemItem="featured" id="CMq-sN-1nZ"/>
+                    <tabBarItem key="tabBarItem" title="" image="table" selectedImage="table" id="CMq-sN-1nZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CQD-1r-dWJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -241,7 +241,7 @@
         <scene sceneID="AFb-8Q-hAk">
             <objects>
                 <navigationController id="46x-lh-PWY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" selectedImage="collection" systemItem="more" id="b3i-0X-jH0"/>
+                    <tabBarItem key="tabBarItem" title="" image="collection" selectedImage="collection" id="b3i-0X-jH0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j8t-mG-m0Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
