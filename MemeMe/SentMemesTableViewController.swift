@@ -15,6 +15,13 @@ class SentMemesTableViewController: UITableViewController {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
 
+    //MARK: - View lifecycle
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        
+    }
 
     @IBAction func addMeme(sender: AnyObject) {
         
@@ -46,7 +53,8 @@ class SentMemesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
             
         let memeDetailVC = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
-        memeDetailVC.memeImageView.image = memes[indexPath.item].memeImage
+        memeDetailVC.selectedMeme = memes[indexPath.item]
+        
         navigationController!.pushViewController(memeDetailVC, animated: true)
         
     }
