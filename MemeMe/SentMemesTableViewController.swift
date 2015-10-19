@@ -54,6 +54,7 @@ class SentMemesTableViewController: UITableViewController {
             
         let memeDetailVC = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         memeDetailVC.selectedMeme = memes[indexPath.item]
+        memeDetailVC.hidesBottomBarWhenPushed = true        //Turn off tab bar
         
         navigationController!.pushViewController(memeDetailVC, animated: true)
         

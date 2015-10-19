@@ -13,7 +13,7 @@ class MemeDetailViewController: UIViewController {
     @IBOutlet weak var memeImageView: UIImageView!
     
     var selectedMeme: Meme!
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -23,14 +23,17 @@ class MemeDetailViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if (segue.identifier == "editMemeSegue") {
+        if let editVC = segue.destinationViewController as? MemeEditorViewController {
             
-            if let editVC = segue.destinationViewController as? MemeEditorViewController {
+            if let identifier = segue.identifier {
                 
-                editVC.ImagePickerView!.image = selectedMeme.originalImage
-                editVC.topTextField!.text = selectedMeme.topText
-                editVC.bottomTextField!.text = selectedMeme.bottomText
+                if identifier == "editMemeSegue" {
                 
+                    editVC.imageToMeme = selectedMeme.originalImage
+                    editVC.topMemeText = selectedMeme.topText
+                    editVC.bottomMemeText = selectedMeme.bottomText
+                
+                }
             
             }
             

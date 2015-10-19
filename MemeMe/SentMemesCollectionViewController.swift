@@ -68,6 +68,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         
         //Setup the View Controller with selected meme
         memeDetailVC.selectedMeme = memes[indexPath.item]
+        memeDetailVC.hidesBottomBarWhenPushed = true    //Turn off tab bar
         
         //Present the view controller
         self.navigationController!.pushViewController(memeDetailVC, animated: true)

@@ -17,6 +17,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
     
+    var imageToMeme: UIImage!
+    var topMemeText: String!
+    var bottomMemeText: String!
+    
     
 // MARK: View lifecycle
     
@@ -52,9 +56,25 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // Setup initial Meme configuration
     func setupMeme() {
         
-        topTextField.text = "Top"        //Default placeholder text
-        bottomTextField.text = "Bottom"  //Default placeholder text
+        //If the meme image variables have not been set yet then use defaults
         
+        if let image = imageToMeme as UIImage? {
+            ImagePickerView.image = image
+        }
+        
+        if let upperText = topMemeText as String? {
+            topTextField.text = upperText
+        } else {
+            topTextField.text = "Top"  //Default placeholder text
+        }
+        
+        if let lowerText = bottomMemeText as String? {
+            bottomTextField.text = lowerText
+        } else {
+            bottomTextField.text = "Bottom"  //Default placeholder text
+        }
+            
+
         let memeTextAttributes = [
             NSStrokeColorAttributeName: UIColor .blackColor(),
             NSForegroundColorAttributeName: UIColor .whiteColor(),
@@ -69,8 +89,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         topTextField.textAlignment = NSTextAlignment.Center
         bottomTextField.textAlignment = NSTextAlignment.Center
-        
-        ImagePickerView.image = nil
+
         
         shareButton.enabled = false //Disable Sharing button until user has finished a meme
         
