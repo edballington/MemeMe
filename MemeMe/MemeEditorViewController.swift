@@ -30,6 +30,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         topTextField.delegate = self
         bottomTextField.delegate = self
         
+        navigationController?.navigationBarHidden = true    //Prevents navigation controller from covering up top toolbar
+        
         setupMeme()
         
     }
@@ -106,7 +108,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         }
         picker.dismissViewControllerAnimated(true, completion: nil)
         
-        shareButton.enabled = true   //Turn Sharing button back on
+        shareButton.enabled = true   //Turn Sharing button back on once an image is chosen
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -222,6 +224,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         textField.resignFirstResponder()
         
+        /*Enable share button if there is already a photo (in case you are editing a previous meme) */
+        if ImagePickerView.image != nil {
+            shareButton.enabled = true
+        }
+        
         return true
     }
     
@@ -250,7 +257,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
         let userinfo = notification.userInfo
         let keyboardSize = userinfo![UIKeyboardFrameEndUserInfoKey] as! NSValue //of CGRrect
-        let size = keyboardSize.CGRectValue().height
         return keyboardSize.CGRectValue().height
         
     }

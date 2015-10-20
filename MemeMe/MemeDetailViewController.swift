@@ -17,7 +17,7 @@ class MemeDetailViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.memeImageView!.image = selectedMeme.memeImage
+        memeImageView!.image = selectedMeme.memeImage
         
     }
     
@@ -32,6 +32,7 @@ class MemeDetailViewController: UIViewController {
                     editVC.imageToMeme = selectedMeme.originalImage
                     editVC.topMemeText = selectedMeme.topText
                     editVC.bottomMemeText = selectedMeme.bottomText
+                    
                 
                 }
             

@@ -32,12 +32,12 @@ class SentMemesCollectionViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.collectionView!.reloadData()
+        collectionView!.reloadData()
     }
 
     @IBAction func addMeme(sender: AnyObject) {
         
-        let memeEditorVC = self.storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
+        let memeEditorVC = storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
         navigationController!.presentViewController(memeEditorVC, animated: true, completion: nil)
         
     }
@@ -71,7 +71,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         memeDetailVC.hidesBottomBarWhenPushed = true    //Turn off tab bar
         
         //Present the view controller
-        self.navigationController!.pushViewController(memeDetailVC, animated: true)
+        navigationController!.pushViewController(memeDetailVC, animated: true)
         
     }
 
