@@ -29,9 +29,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         topTextField.delegate = self
         bottomTextField.delegate = self
-        
-        navigationController?.navigationBarHidden = true    //Prevents navigation controller from covering up top toolbar
-        
+               
         setupMeme()
         
     }
@@ -189,9 +187,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
             if success == true {
                 
-                //Save the meme and dismiss the meme editor view controller
+                //Save the meme and go back to the root view controller
                 self.save()
                 self.dismissViewControllerAnimated(true, completion: nil)
+                
             }
             
         }

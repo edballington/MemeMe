@@ -21,24 +21,21 @@ class MemeDetailViewController: UIViewController {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    @IBAction func editMeme(sender: AnyObject) {
         
-        if let editVC = segue.destinationViewController as? MemeEditorViewController {
+        let memeEditorVC = self.storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
+        
+        memeEditorVC.imageToMeme = selectedMeme.originalImage
+        memeEditorVC.topMemeText = selectedMeme.topText
+        memeEditorVC.bottomMemeText = selectedMeme.bottomText
+        
+        //Present the Meme Editor View Controller and go back to the table or collection view when done.
+        
+        navigationController!.presentViewController(memeEditorVC, animated: true, completion: {
             
-            if let identifier = segue.identifier {
-                
-                if identifier == "editMemeSegue" {
-                
-                    editVC.imageToMeme = selectedMeme.originalImage
-                    editVC.topMemeText = selectedMeme.topText
-                    editVC.bottomMemeText = selectedMeme.bottomText
-                    
-                
-                }
+            navigationController?.popViewControllerAnimated(true)
             
-            }
-            
-        }
+        })
         
     }
 

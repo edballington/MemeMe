@@ -31,6 +31,7 @@
             <objects>
                 <navigationController id="xNt-k8-riY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="table" selectedImage="table" id="CMq-sN-1nZ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CQD-1r-dWJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -49,7 +50,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="SentMemesTableViewController" id="mp0-eC-eTK" customClass="SentMemesTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yK5-rj-tv3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,16 +96,16 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="Trv-gx-hTt">
             <objects>
-                <viewController storyboardIdentifier="MemeDetailViewController" id="ARb-Ux-sUT" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" hidesBottomBarWhenPushed="YES" id="ARb-Ux-sUT" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OW9-Ne-Zfh"/>
                         <viewControllerLayoutGuide type="bottom" id="zUV-gp-Lo9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HCN-KH-7df">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZb-yJ-0jQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZb-yJ-0jQ">
                                 <rect key="frame" x="20" y="0.0" width="560" height="516"/>
                                 <animations/>
                             </imageView>
@@ -118,15 +119,16 @@
                             <constraint firstItem="SZb-yJ-0jQ" firstAttribute="leading" secondItem="HCN-KH-7df" secondAttribute="leadingMargin" id="uwx-2T-xQE"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mo0-Wo-PFv">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Cvd-Zx-STo">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="show" identifier="editMemeSegue" id="yo6-Nl-4cs"/>
+                                <action selector="editMeme:" destination="ARb-Ux-sUT" id="Wvq-Nc-5by"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="memeImageView" destination="SZb-yJ-0jQ" id="2nR-uA-YNH"/>
                     </connections>
@@ -144,15 +146,15 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Wu-m2-bQs">
-                                <rect key="frame" x="20" y="44" width="560" height="468"/>
+                                <rect key="frame" x="20" y="44" width="560" height="512"/>
                                 <animations/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bSi-5l-Thb">
-                                <rect key="frame" x="0.0" y="512" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <animations/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Y5J-u8-CYq"/>
@@ -178,7 +180,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Bottom" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-dd-3UC">
-                                <rect key="frame" x="20" y="409" width="560" height="17"/>
+                                <rect key="frame" x="20" y="446" width="560" height="17"/>
                                 <animations/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -255,6 +257,7 @@
             <objects>
                 <navigationController id="46x-lh-PWY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="collection" selectedImage="collection" id="b3i-0X-jH0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j8t-mG-m0Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -273,7 +276,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="SentMemesCollectionViewController" id="3dn-aU-yBS" customClass="SentMemesCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="BtX-9V-UKr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
