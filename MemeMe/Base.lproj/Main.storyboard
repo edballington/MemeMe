@@ -208,23 +208,22 @@
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3Wu-m2-bQs" firstAttribute="top" secondItem="W1F-kT-mAc" secondAttribute="bottom" symbolic="YES" id="0f1-cG-HnR"/>
                             <constraint firstItem="W1F-kT-mAc" firstAttribute="leading" secondItem="bSi-5l-Thb" secondAttribute="leading" id="20E-8G-pP9"/>
                             <constraint firstAttribute="trailing" secondItem="bSi-5l-Thb" secondAttribute="trailing" id="2Mt-nw-OUj"/>
                             <constraint firstItem="3Wu-m2-bQs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="3ac-4d-5c0"/>
                             <constraint firstItem="W1F-kT-mAc" firstAttribute="trailing" secondItem="bSi-5l-Thb" secondAttribute="trailing" id="8ia-cC-MmY"/>
-                            <constraint firstAttribute="centerX" secondItem="3Wu-m2-bQs" secondAttribute="centerX" id="A8m-zE-Uzf"/>
-                            <constraint firstItem="bSi-5l-Thb" firstAttribute="top" secondItem="3Wu-m2-bQs" secondAttribute="bottom" symbolic="YES" id="BS0-Qb-Uit"/>
-                            <constraint firstItem="3Wu-m2-bQs" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Feu-rg-V71"/>
                             <constraint firstItem="8SL-MG-npb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Jfx-TT-KhG"/>
                             <constraint firstAttribute="centerX" secondItem="ujZ-dd-3UC" secondAttribute="centerX" id="P6l-5Y-Jgd"/>
                             <constraint firstItem="3Wu-m2-bQs" firstAttribute="top" secondItem="W1F-kT-mAc" secondAttribute="bottom" constant="36" id="PPB-aI-eho"/>
                             <constraint firstItem="ujZ-dd-3UC" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="QJB-3f-hbc"/>
                             <constraint firstItem="W1F-kT-mAc" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="XDa-V0-fs7"/>
                             <constraint firstItem="ujZ-dd-3UC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ZQn-3K-9xx"/>
-                            <constraint firstItem="3Wu-m2-bQs" firstAttribute="top" secondItem="W1F-kT-mAc" secondAttribute="bottom" id="aIF-ii-lp0"/>
+                            <constraint firstItem="3Wu-m2-bQs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="fji-jT-org"/>
                             <constraint firstItem="bSi-5l-Thb" firstAttribute="top" secondItem="ujZ-dd-3UC" secondAttribute="bottom" multiplier="1.2" symbolic="YES" id="foi-SA-Rrw"/>
-                            <constraint firstItem="3Wu-m2-bQs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="hwN-Ve-rT4"/>
                             <constraint firstItem="bSi-5l-Thb" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="ovh-Yd-AGe"/>
+                            <constraint firstAttribute="trailing" secondItem="3Wu-m2-bQs" secondAttribute="trailing" constant="20" symbolic="YES" id="sVw-rM-ysR"/>
+                            <constraint firstItem="bSi-5l-Thb" firstAttribute="top" secondItem="3Wu-m2-bQs" secondAttribute="bottom" symbolic="YES" id="svh-Nm-BGL"/>
                             <constraint firstItem="8SL-MG-npb" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="umv-0y-AJC"/>
                             <constraint firstItem="8SL-MG-npb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="v53-vC-dcS"/>
                             <constraint firstItem="8SL-MG-npb" firstAttribute="top" secondItem="W1F-kT-mAc" secondAttribute="bottom" constant="64" id="yHg-JY-XUn"/>
