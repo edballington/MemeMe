@@ -23,7 +23,7 @@ class MemeDetailViewController: UIViewController {
     
     @IBAction func editMeme(sender: AnyObject) {
         
-        let memeEditorVC = self.storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
+        let memeEditorVC = storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
         
         memeEditorVC.imageToMeme = selectedMeme.originalImage
         memeEditorVC.topMemeText = selectedMeme.topText
@@ -34,7 +34,7 @@ class MemeDetailViewController: UIViewController {
         presentViewController(memeEditorVC, animated: true, completion: nil)
         
         //Go back to the root view controller (underneath the editor view controller that was just presented)
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        navigationController?.popToRootViewControllerAnimated(true)
     }
 
     

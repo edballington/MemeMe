@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76144CC91BC450DE00F4B738 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144CC81BC450DE00F4B738 /* Meme.swift */; settings = {ASSET_TAGS = (); }; };
-		76608B111BC5EAEB00C4B305 /* SentMemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76608B101BC5EAEB00C4B305 /* SentMemesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		76608B131BC5EB0900C4B305 /* SentMemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76608B121BC5EB0900C4B305 /* SentMemesCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		76144CC91BC450DE00F4B738 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76144CC81BC450DE00F4B738 /* Meme.swift */; };
+		76608B111BC5EAEB00C4B305 /* SentMemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76608B101BC5EAEB00C4B305 /* SentMemesTableViewController.swift */; };
+		76608B131BC5EB0900C4B305 /* SentMemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76608B121BC5EB0900C4B305 /* SentMemesCollectionViewController.swift */; };
 		76E617BB1B96762000F03AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E617BA1B96762000F03AA4 /* AppDelegate.swift */; };
 		76E617BD1B96762000F03AA4 /* MemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E617BC1B96762000F03AA4 /* MemeEditorViewController.swift */; };
 		76E617C01B96762000F03AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E617BE1B96762000F03AA4 /* Main.storyboard */; };
 		76E617C21B96762000F03AA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E617C11B96762000F03AA4 /* Images.xcassets */; };
 		76E617C51B96762000F03AA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76E617C31B96762000F03AA4 /* LaunchScreen.xib */; };
 		76E617D11B96762000F03AA4 /* MemeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E617D01B96762000F03AA4 /* MemeMeTests.swift */; };
-		76F41D441BC5F90500817835 /* CustomMemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F41D431BC5F90500817835 /* CustomMemeCell.swift */; settings = {ASSET_TAGS = (); }; };
-		76F41D461BC841F300817835 /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F41D451BC841F300817835 /* MemeDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		76F41D441BC5F90500817835 /* CustomMemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F41D431BC5F90500817835 /* CustomMemeCell.swift */; };
+		76F41D461BC841F300817835 /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F41D451BC841F300817835 /* MemeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +178,7 @@
 				TargetAttributes = {
 					76E617B41B96761F00F03AA4 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = CZDK9JC4YC;
 					};
 					76E617C91B96762000F03AA4 = {
 						CreatedOnToolsVersion = 6.4;
@@ -363,10 +364,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MemeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ed-Ballington.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -374,10 +378,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MemeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ed-Ballington.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

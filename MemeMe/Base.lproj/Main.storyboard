@@ -153,6 +153,13 @@
                                 <rect key="frame" x="20" y="44" width="560" height="512"/>
                                 <animations/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Top" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="8SL-MG-npb">
+                                <rect key="frame" x="20" y="88" width="560" height="17"/>
+                                <animations/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bSi-5l-Thb">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <animations/>
@@ -172,20 +179,6 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="DkY-92-FmG"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Top" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="8SL-MG-npb">
-                                <rect key="frame" x="20" y="108" width="560" height="17"/>
-                                <animations/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Bottom" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-dd-3UC">
-                                <rect key="frame" x="20" y="446" width="560" height="17"/>
-                                <animations/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1F-kT-mAc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <animations/>
@@ -204,6 +197,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Bottom" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-dd-3UC">
+                                <rect key="frame" x="20" y="488" width="560" height="17"/>
+                                <animations/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -220,13 +220,13 @@
                             <constraint firstItem="W1F-kT-mAc" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="XDa-V0-fs7"/>
                             <constraint firstItem="ujZ-dd-3UC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ZQn-3K-9xx"/>
                             <constraint firstItem="3Wu-m2-bQs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="fji-jT-org"/>
-                            <constraint firstItem="bSi-5l-Thb" firstAttribute="top" secondItem="ujZ-dd-3UC" secondAttribute="bottom" multiplier="1.2" symbolic="YES" id="foi-SA-Rrw"/>
+                            <constraint firstItem="bSi-5l-Thb" firstAttribute="top" secondItem="ujZ-dd-3UC" secondAttribute="bottom" multiplier="1.1" symbolic="YES" id="foi-SA-Rrw"/>
                             <constraint firstItem="bSi-5l-Thb" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="ovh-Yd-AGe"/>
                             <constraint firstAttribute="trailing" secondItem="3Wu-m2-bQs" secondAttribute="trailing" constant="20" symbolic="YES" id="sVw-rM-ysR"/>
                             <constraint firstItem="bSi-5l-Thb" firstAttribute="top" secondItem="3Wu-m2-bQs" secondAttribute="bottom" symbolic="YES" id="svh-Nm-BGL"/>
                             <constraint firstItem="8SL-MG-npb" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="umv-0y-AJC"/>
                             <constraint firstItem="8SL-MG-npb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="v53-vC-dcS"/>
-                            <constraint firstItem="8SL-MG-npb" firstAttribute="top" secondItem="W1F-kT-mAc" secondAttribute="bottom" constant="64" id="yHg-JY-XUn"/>
+                            <constraint firstItem="8SL-MG-npb" firstAttribute="top" secondItem="W1F-kT-mAc" secondAttribute="bottom" multiplier="2" symbolic="YES" id="yHg-JY-XUn"/>
                             <constraint firstItem="bSi-5l-Thb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="yKa-Jk-Y8u"/>
                         </constraints>
                         <variation key="default">

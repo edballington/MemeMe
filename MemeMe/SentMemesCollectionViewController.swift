@@ -23,8 +23,8 @@ class SentMemesCollectionViewController: UICollectionViewController {
         //Setup the collectionView flow layout properties\
         
         let space: CGFloat = 3.0
-        let widthDimension = (self.view.frame.size.width - (2 * space)) / 3.0
-        let heightDimension = (self.view.frame.size.height - (2 * space)) / 3.0
+        let widthDimension = (view.frame.size.width - (2 * space)) / 3.0
+        let heightDimension = (view.frame.size.height - (2 * space)) / 3.0
         
         collectionViewFlowLayout.minimumInteritemSpacing = 3.0
         collectionViewFlowLayout.minimumLineSpacing = space
@@ -63,7 +63,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         // Get the detailViewController from storyboard
-        let object: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController")
+        let object: AnyObject = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController")
         let memeDetailVC = object as! MemeDetailViewController
         
         //Setup the View Controller with selected meme
