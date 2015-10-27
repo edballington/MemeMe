@@ -31,12 +31,10 @@ class MemeDetailViewController: UIViewController {
         
         //Present the Meme Editor View Controller and go back to the table or collection view when done.
         
-        navigationController!.presentViewController(memeEditorVC, animated: true, completion: {
-            
-            navigationController?.popViewControllerAnimated(true)
-            
-        })
+        presentViewController(memeEditorVC, animated: true, completion: nil)
         
+        //Go back to the root view controller (underneath the editor view controller that was just presented)
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
     

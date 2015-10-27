@@ -187,8 +187,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
             if success == true {
                 
-                //Save the meme and go back to the root view controller
+                //Save the meme and dismiss the view controller
                 self.save()
+                
                 self.dismissViewControllerAnimated(true, completion: nil)
                 
             }
